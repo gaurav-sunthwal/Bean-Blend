@@ -1,10 +1,18 @@
 //@ts-nocheck
 "use client";
 
-import { Box, Button, Heading, HStack, Text, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Text,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import mug from "../Img/Mug.png";
+import app from "../Img/app.png";
 import Image from "next/image";
 
 function Slider() {
@@ -14,7 +22,7 @@ function Slider() {
         <Carousel
           infiniteLoop
           autoPlay
-          interval={2000}
+          interval={5000}
           showStatus={false}
           showArrows={false}
           showThumbs={false}
@@ -27,21 +35,22 @@ function Slider() {
               officia rerum sit debitis doloribus magni veritatis quibusdam eum,
               ducimus recusandae tempora suscipit, rem illo. Nemo culpa quaerat
               minus provident.`}
-              btn1={"Download App"}
-              btn2={"Shop Coffee"}
+              btn1={"Shop Coffee"}
+              btn2={"Download App"}
               img={mug}
             />
           </Box>
           <Box>
             <SliderPage
-              title={"Bean & Blend Deliciious Coffee"}
+              title={"Bean & Blend Amazing Application"}
               subTitle={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga et
               officia rerum sit debitis doloribus magni veritatis quibusdam eum,
               ducimus recusandae tempora suscipit, rem illo. Nemo culpa quaerat
               minus provident.`}
+              
               btn1={"Download App"}
               btn2={"Shop Coffee"}
-              img={mug}
+              img={app}
             />
           </Box>
         </Carousel>
@@ -54,10 +63,14 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
     <>
-      <Box>
+      <Box zIndex={"-1"}>
         <HStack justifyContent={"space-around"} flexWrap={"wrap-reverse"}>
-          <Box maxW={isLargerThan800 ?  "50%" : "100%"} p={5}>
-            <Heading fontSize={"77px"} textAlign={"left"} p={2}>
+          <Box maxW={isLargerThan800 ? "50%" : "100%"} p={5}>
+            <Heading
+              fontSize={isLargerThan800 ? "7vw" : "12vw"}
+              textAlign={"left"}
+              p={2}
+            >
               {title}
             </Heading>
             <Text textAlign={"left"} p={2}>
@@ -79,7 +92,7 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
               </Button>
             </HStack>
           </Box>
-          <Box maxW={isLargerThan800 ? "40%" : "100%"} w={"100%"}>
+          <Box maxW={isLargerThan800 ? "50%" : "100%"} w={"42%"} maxH={"100vh"}>
             <Image src={img} alt="slider-1" />
           </Box>
         </HStack>

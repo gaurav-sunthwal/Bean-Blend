@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-  /* background: #e9dfdf; */
+  font-family: "Jost", sans-serif !important;
+  font-optical-sizing: auto !important;
+  /* font-weight: 700 !important; */
+  font-style: normal !important;
 }
