@@ -38,7 +38,7 @@ type Props = {
 export default function Navbar() {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
-    <Box m={2}>
+    <Box m={2} zIndex={9}>
       <HStack justifyContent={"space-between"}>
         <Box m={2} w={"100px"}>
           <Image1 src={logo} alt="logo" />
