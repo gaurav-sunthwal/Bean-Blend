@@ -92,7 +92,7 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
               </Button>
             </HStack>
           </Box>
-          <Box maxW={isLargerThan800 ? "50%" : "100%"} w={"42%"} maxH={"100vh"}>
+          <Box maxW={isLargerThan800 ? "50%" : "100%"} w={isLargerThan800 ? "42%" : "100%"} maxH={"100vh"}>
             <Image src={img} alt="slider-1" />
           </Box>
         </HStack>
