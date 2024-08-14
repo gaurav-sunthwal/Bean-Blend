@@ -10,3 +10,20 @@
   /* font-weight: 700 !important; */
   font-style: normal !important;
 }
+
+
+
+.selected{
+  background: rgb(243 244 246) !important;
+}
+
+
+
+.ExportCard {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+  transition: box-shadow 0.5s ease-in-out !important; /* Transition for smooth shadow change */
+}
+
+.ExportCard:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}

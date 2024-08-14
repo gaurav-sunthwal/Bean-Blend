@@ -38,14 +38,17 @@ type Props = {
 export default function Navbar() {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
-    <Box m={2} zIndex={9}>
+    <div className="selected">
+
+    <Box p={2} zIndex={9}>
       <HStack justifyContent={"space-between"}>
-        <Box m={2} w={"100px"}>
+        <Box  w={"100px"}>
           <Image1 src={logo} alt="logo" />
         </Box>
         {isLargerThan800 ? <OtherItem /> : <MobileManu />}
       </HStack>
     </Box>
+    </div>
   );
 }
 
@@ -97,11 +100,16 @@ function ButtonSec({}) {
   return (
     <>
       <HStack>
-        <Box>
+        <Box p={2} cursor={"pointer"} _hover={{
+           transform:"scale(1.2)", 
+        }}>
           <ShopBag />
         </Box>
         <Box>
-          <Button bg={"#171717"} color={"white"} h={"48px"}>
+          <Button bg={"#171717"} _hover={{
+            color:"white",
+            transform:"scale(1.04)", 
+          }} color={"white"} h={"48px"}>
             Buy Gift Vouchers
           </Button>
         </Box>
@@ -140,7 +148,7 @@ function ShopBag() {
 
   return (
     <>
-      <Box boxShadow="md" borderRadius={"50%"} p={2} bg={"#e9dfdf"}>
+      <Box boxShadow="md" borderRadius={"50%"} p={2} bg={"white"}>
         <Heading
           p={"0px"}
           textAlign={"center"}

@@ -18,11 +18,11 @@ import Image from "next/image";
 function Slider() {
   return (
     <div>
-      <Box p={2}>
+      <Box  >
         <Carousel
           infiniteLoop
           autoPlay
-          interval={5000}
+          interval={10000}
           showStatus={false}
           showArrows={false}
           showThumbs={false}
@@ -62,10 +62,10 @@ function Slider() {
 function SliderPage({ title, subTitle, btn1, btn2, img }) {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
-    <>
-      <Box zIndex={"-1"}>
+    <div className="selected" >
+      <Box h={"auto"}>
         <HStack justifyContent={"space-around"} flexWrap={"wrap-reverse"}>
-          <Box maxW={isLargerThan800 ? "50%" : "100%"} p={5}>
+          <Box maxW={isLargerThan800 ? "50%" : "100%"} >
             <Heading
               fontSize={isLargerThan800 ? "7vw" : "12vw"}
               textAlign={"left"}
@@ -76,18 +76,19 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
             <Text textAlign={"left"} p={2}>
               {subTitle}
             </Text>
-            <HStack p={2}>
+            <HStack p={2} mb={"3"}>
               <Button
                 h={"50px"}
                 bg={"#171717"}
                 color={"white"}
                 _hover={{
                   color: "white",
+                  transform:"scale(1.04)"
                 }}
               >
                 {btn1}
               </Button>
-              <Button h={"50px"} colorScheme="pink">
+              <Button h={"50px"} colorScheme="pink" _hover={{transform:"scale(1.04)", }}>
                 {btn2}
               </Button>
             </HStack>
@@ -97,7 +98,7 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
           </Box>
         </HStack>
       </Box>
-    </>
+    </div>
   );
 }
 
