@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "./components/Navbar";
+import AnimationKit from "./_app";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>{"Bean & Blend "}</title>
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        ></link>
       </head>
       <body className={inter.className}>
         <Providers>

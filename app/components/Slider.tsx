@@ -17,49 +17,50 @@ import "swiper/css";
 
 function Slider() {
   return (
-    <>
-      <Swiper
-        className="mySwiper"
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-      >
-        <SwiperSlide>
-          <Box>
-            <SliderPage
-              title={"Bean & Blend Deliciious Coffee"}
-              subTitle={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga et
+    <Box>
+     
+        <Swiper
+          className="mySwiper"
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+        >
+          <SwiperSlide>
+            <Box>
+              <SliderPage
+                title={"Bean & Blend Deliciious Coffee"}
+                subTitle={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga et
               officia rerum sit debitis doloribus magni veritatis quibusdam eum,
               ducimus recusandae tempora suscipit, rem illo. Nemo culpa quaerat
               minus provident.`}
-              btn1={"Shop Coffee"}
-              btn2={"Download App"}
-              img={mug}
-            />
-          </Box>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Box>
-            <SliderPage
-              title={"Bean & Blend Amazing Application"}
-              subTitle={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga et
+                btn1={"Shop Coffee"}
+                btn2={"Download App"}
+                img={mug}
+              />
+            </Box>
+          </SwiperSlide>
+          <SwiperSlide>
+            <Box>
+              <SliderPage
+                title={"Bean & Blend Amazing Application"}
+                subTitle={`Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga et
               officia rerum sit debitis doloribus magni veritatis quibusdam eum,
               ducimus recusandae tempora suscipit, rem illo. Nemo culpa quaerat
               minus provident.`}
-              btn1={"Download App"}
-              btn2={"Shop Coffee"}
-              img={app}
-            />
-          </Box>
-        </SwiperSlide>
-      </Swiper>
-    </>
+                btn1={"Download App"}
+                btn2={"Shop Coffee"}
+                img={app}
+              />
+            </Box>
+          </SwiperSlide>
+        </Swiper>
+      </Box>
   );
 }
 
@@ -67,9 +68,9 @@ function SliderPage({ title, subTitle, btn1, btn2, img }) {
   const [isLargerThan800] = useMediaQuery("(min-width: 800px)");
   return (
     <div className="selected">
-      <Box h={"auto"}>
+      <Box h={"auto"} p={4}>
         <HStack justifyContent={"space-around"} flexWrap={"wrap-reverse"}>
-          <Box maxW={isLargerThan800 ? "50%" : "100%"}>
+          <Box  maxW={isLargerThan800 ? "50%" : "100%"}>
             <Heading
               fontSize={isLargerThan800 ? "7vw" : "12vw"}
               textAlign={"left"}
