@@ -18,11 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>{"Bean & Blend "}</title>
+        <link
+          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+          rel="stylesheet"
+        ></link>
+      </head>
       <body className={inter.className}>
         <Providers>
-          <Navbar/>
+          <Navbar />
           {children}
-          </Providers>
+        </Providers>
       </body>
     </html>
   );

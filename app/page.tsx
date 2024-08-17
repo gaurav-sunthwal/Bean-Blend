@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import Slider from "./components/Slider";
 import Explore from "./components/Explore";
+import OrderNow from "./components/OrderNow";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Slider />
       </Box>
       <Explore />
+      <OrderNow />
     </Box>
   );
 }
