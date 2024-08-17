@@ -18,19 +18,17 @@ import "swiper/css";
 function Slider() {
   return (
     <>
-      <Swiper className="mySwiper" 
+      <Swiper
+        className="mySwiper"
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         }}
-        pagination={
-          {
-            clickable:true,
-          }
-        }
-      
+        pagination={{
+          clickable: true,
+        }}
       >
         <SwiperSlide>
           <Box>

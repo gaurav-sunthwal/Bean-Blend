@@ -1,6 +1,5 @@
 import { Box, HStack } from "@chakra-ui/react";
 import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
 import Slider from "./components/Slider";
 import Explore from "./components/Explore";
 import OrderNow from "./components/OrderNow";
